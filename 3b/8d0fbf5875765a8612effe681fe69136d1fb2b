@@ -1,0 +1,19 @@
+index.html
+  s_b5f056cd5ab099::t_e50d407f88e07f 1-126
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.19",
+  "base_commit_sha": "3b8d0fbf5875765a8612effe681fe69136d1fb2b",
+  "prompts": {},
+  "sessions": {
+    "s_b5f056cd5ab099": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ba27ce78-dfee-4af0-a5d1-f9c25d26fc95",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Yaroslav Lazor <yaroslav.lazor@railsware.com>"
+    }
+  }
+}
