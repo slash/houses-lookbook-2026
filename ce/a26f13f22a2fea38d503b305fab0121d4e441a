@@ -1,0 +1,21 @@
+sunswept-ua.html
+  s_b5f056cd5ab099::t_cadb8a42a8f872 154-164
+sunswept.html
+  s_b5f056cd5ab099::t_c8daeb43f62e38 163-173
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.20",
+  "base_commit_sha": "cea26f13f22a2fea38d503b305fab0121d4e441a",
+  "prompts": {},
+  "sessions": {
+    "s_b5f056cd5ab099": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ba27ce78-dfee-4af0-a5d1-f9c25d26fc95",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Yaroslav Lazor <yaroslav.lazor@railsware.com>"
+    }
+  }
+}
