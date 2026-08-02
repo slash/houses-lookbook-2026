@@ -1,0 +1,58 @@
+<title>Лазори — пошук дому</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+:root{--paper:#EDEBE4;--card:#fff;--ink:#1B2620;--mut:#6E756B;--line:#E0DCD1;--teal:#0E7C74;--coral:#DD5A36;--gold:#C6952f;--band:#F5F2EA}
+@media(prefers-color-scheme:dark){:root{--paper:#12100D;--card:#1C1A15;--ink:#EDEAE0;--mut:#9A9488;--line:#2C2820;--teal:#5FB5AC;--coral:#EE8060;--gold:#D9B25a;--band:#181510}}
+:root[data-theme="light"]{--paper:#EDEBE4;--card:#fff;--ink:#1B2620;--mut:#6E756B;--line:#E0DCD1;--teal:#0E7C74;--coral:#DD5A36;--gold:#C6952f;--band:#F5F2EA}
+:root[data-theme="dark"]{--paper:#12100D;--card:#1C1A15;--ink:#EDEAE0;--mut:#9A9488;--line:#2C2820;--teal:#5FB5AC;--coral:#EE8060;--gold:#D9B25a;--band:#181510}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.58 system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:34px 18px 80px}
+.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:11px;font-weight:700;color:var(--teal)}
+h1{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-weight:600;font-size:clamp(28px,6vw,40px);margin:7px 0 6px;line-height:1.08}
+.sub{color:var(--mut);font-size:15px;margin:0 0 4px;max-width:58ch}
+.lang{display:inline-block;margin-top:12px;font-size:13px;color:var(--mut);text-decoration:none;border:1px solid var(--line);border-radius:16px;padding:5px 12px}
+.lang:hover{border-color:var(--teal);color:var(--ink)}
+h2{font-family:"Iowan Old Style",Palatino,Georgia,serif;font-weight:600;font-size:19px;margin:34px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--line)}
+a.card{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px 17px;margin-bottom:10px;text-decoration:none;color:inherit;transition:.14s}
+a.card:hover{border-color:var(--teal);transform:translateX(2px)}
+a.card.hot{border-left:4px solid var(--coral)}
+.ico{font-size:26px;flex:none;width:34px;text-align:center}
+.tx{flex:1;min-width:0}
+.tt{font-weight:700;font-size:15.5px;display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.dd{font-size:13px;color:var(--mut);margin-top:2px}
+.tag{font:700 10px ui-monospace,Menlo,monospace;padding:2px 7px;border-radius:11px;color:#fff}
+.tag.ua{background:var(--gold)}.tag.new{background:var(--coral)}.tag.tool{background:var(--teal)}.tag.en{background:var(--mut)}
+.arw{color:var(--mut);font-size:19px;flex:none}
+.note{background:var(--band);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:13.5px;color:var(--mut);margin-top:18px}
+.note b{color:var(--ink)}
+.foot{margin-top:34px;font-size:12px;color:var(--mut);text-align:center}
+</style>
+<div class="wrap">
+  <div class="eyebrow">Родина Лазор · Лос-Анджелес</div>
+  <h1>Пошук дому 🏡</h1>
+  <p class="sub">Усе, що ми дослідили — оголошення, глибокі досьє, порівняння та живі інструменти. Все в одному місці.</p>
+  <a class="lang" href="hub.html">🇬🇧 English version →</a>
+
+  <h2>Почни звідси</h2>
+  <a class="card hot" href="lookbook.html"><span class="ico">🏡</span><span class="tx"><span class="tt">Обери будинки для перегляду <span class="tag ua">UA</span></span><span class="dd">Фото, коментарі, фільтри (місто / школа / оренда чи продаж / день показу). Познач ті, що хочеш подивитись — і надішли назад.</span></span><span class="arw">→</span></a>
+
+  <h2>Глибокі досьє</h2>
+  <a class="card hot" href="sunswept-ua.html"><span class="ico">🔬</span><span class="tx"><span class="tt">3983 Sunswept Dr <span class="tag ua">УКРАЇНСЬКОЮ</span> <span class="tag new">8 досліджень</span></span><span class="dd">Конструкція, дах, пожежа, страхування, школи, злочинність, клімат, ціна. Найглибше дослідження — і найважливіше.</span></span><span class="arw">→</span></a>
+  <a class="card" href="sunswept.html"><span class="ico">🔬</span><span class="tx"><span class="tt">3983 Sunswept Dr <span class="tag en">EN</span></span><span class="dd">Те саме англійською — для агента чи інспектора.</span></span><span class="arw">→</span></a>
+  <a class="card" href="chelsea.html"><span class="ico">🏛️</span><span class="tx"><span class="tt">1140 Chelsea Ave — Санта-Моніка <span class="tag en">EN</span></span><span class="dd">Дизайнерська перебудова, школа Franklin, 0 днів озону, пішохідність.</span></span><span class="arw">→</span></a>
+  <a class="card" href="maryland.html"><span class="ico">🏊</span><span class="tx"><span class="tt">6660 Maryland Dr — Beverly Grove <span class="tag en">EN</span></span><span class="dd">Новобудова 2023 з басейном; історія чотирьох невдалих спроб продажу.</span></span><span class="arw">→</span></a>
+
+  <h2>Порівняння</h2>
+  <a class="card" href="comparison.html"><span class="ico">🏘️</span><span class="tx"><span class="tt">Усі 19 будинків <span class="tag en">EN</span></span><span class="dd">Повітря, пішохідність, школа, динаміка ціни, оцінка «підходить родині». Сортується.</span></span><span class="arw">→</span></a>
+  <a class="card" href="sm-condos.html"><span class="ico">🏊</span><span class="tx"><span class="tt">Кондо в Санта-Моніці <span class="tag en">EN</span></span><span class="dd">12 варіантів — зручності, HOA, оренда, дохідність, грошовий потік.</span></span><span class="arw">→</span></a>
+
+  <h2>Інструменти та район</h2>
+  <a class="card" href="neighborhood.html"><span class="ico">🏙️</span><span class="tx"><span class="tt">Район Chelsea <span class="tag tool">559 місць</span></span><span class="dd">Усе в межах 15 хвилин пішки або на велосипеді. З фільтрами й пошуком.</span></span><span class="arw">→</span></a>
+  <a class="card" href="chelsea-reach.html"><span class="ico">🎯</span><span class="tx"><span class="tt">Кола досяжності</span><span class="dd">Пішки / велосипед / авто, матриця цінностей, де плавати.</span></span><span class="arw">→</span></a>
+  <a class="card" href="la-temp.html"><span class="ico">🌡️</span><span class="tx"><span class="tt">Температура в ЛА наживо</span><span class="dd">Реальна температура в усіх районах, які ми розглядаємо.</span></span><span class="arw">→</span></a>
+
+  <div class="note"><b>Головне на сьогодні:</b> Sunswept — дуже гарний дім, але дослідження знайшло серйозні проблеми (дах, конструкція, дозволи, страхування). Не пропонувати вище <b>~$2.2M</b>. Деталі — у досьє вище.</div>
+
+  <div class="foot">Дослідження зібране з Claude · це не фінансова, юридична чи інженерна консультація</div>
+</div>
