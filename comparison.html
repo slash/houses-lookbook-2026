@@ -1,0 +1,161 @@
+<title>House comparison — 19 homes</title>
+<style>
+:root{
+  --paper:#EAEEEA;--card:#fff;--ink:#16211D;--mut:#657069;--line:#DBE1DA;
+  --teal:#0E7C74;--walk:#2E7D46;--bike:#BE8115;--coral:#DD5A36;--band:#F3F6F2;
+  --good:#2E7D46;--warn:#BE8115;--bad:#C0483A;
+}
+@media(prefers-color-scheme:dark){:root{
+  --paper:#101715;--card:#18211E;--ink:#E7ECE7;--mut:#8E988F;--line:#26302B;
+  --teal:#4FB5AC;--walk:#5EB577;--bike:#DCA640;--coral:#EE8060;--band:#141C19;
+  --good:#5EB577;--warn:#DCA640;--bad:#D8695B;
+}}
+:root[data-theme="light"]{--paper:#EAEEEA;--card:#fff;--ink:#16211D;--mut:#657069;--line:#DBE1DA;--teal:#0E7C74;--walk:#2E7D46;--bike:#BE8115;--coral:#DD5A36;--band:#F3F6F2;--good:#2E7D46;--warn:#BE8115;--bad:#C0483A}
+:root[data-theme="dark"]{--paper:#101715;--card:#18211E;--ink:#E7ECE7;--mut:#8E988F;--line:#26302B;--teal:#4FB5AC;--walk:#5EB577;--bike:#DCA640;--coral:#EE8060;--band:#141C19;--good:#5EB577;--warn:#DCA640;--bad:#D8695B}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding:30px 18px 90px}
+.serif{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:11px;font-weight:700;color:var(--teal)}
+h1{font-family:"Iowan Old Style",Palatino,Georgia,serif;font-weight:600;font-size:clamp(27px,5vw,40px);line-height:1.06;margin:6px 0 6px;letter-spacing:-.01em}
+.sub{color:var(--mut);font-size:15px;margin:0;max-width:70ch}
+.legend{background:var(--band);border:1px solid var(--line);border-radius:12px;padding:13px 16px;margin:18px 0 6px;font-size:13px;color:var(--mut)}
+.legend b{color:var(--ink)}
+.controls{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin:18px 0 10px}
+.lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--mut);margin-right:2px}
+button.f{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:18px;padding:5px 12px;font:600 12.5px system-ui;cursor:pointer}
+button.f.on{background:var(--teal);border-color:var(--teal);color:#fff}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:860px}
+thead th{position:sticky;top:0;background:var(--card);text-align:right;padding:11px 10px;font:700 11px ui-monospace,Menlo,monospace;color:var(--mut);text-transform:uppercase;letter-spacing:.03em;cursor:pointer;white-space:nowrap;border-bottom:2px solid var(--line);z-index:2}
+thead th.l{text-align:left}
+tbody td{padding:10px;text-align:right;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums;white-space:nowrap}
+tbody td.l{text-align:left}
+tbody tr.main{cursor:pointer}
+tbody tr.main:hover{background:var(--band)}
+tbody tr.main.open{background:var(--band)}
+.rank{color:var(--mut);font:700 12px ui-monospace,Menlo,monospace}
+.addr{font-weight:600}
+.area{color:var(--mut);font-size:12px}
+.chip{display:inline-block;min-width:34px;padding:2px 7px;border-radius:6px;color:#fff;font:700 12px ui-monospace,Menlo,monospace}
+.badge{font:700 10px ui-monospace,Menlo,monospace;padding:2px 7px;border-radius:12px}
+.badge.underwater{background:var(--bad);color:#fff}
+.badge.gained{background:var(--good);color:#fff}
+.badge.flat{background:var(--mut);color:#fff}
+.det td{background:var(--band);padding:0;border-bottom:1px solid var(--line)}
+.detin{padding:16px 20px;display:grid;grid-template-columns:1fr 1fr;gap:14px 26px}
+@media(max-width:640px){.detin{grid-template-columns:1fr}}
+.detin h3{margin:0 0 8px;font-size:15px;grid-column:1/-1;font-family:"Iowan Old Style",Georgia,serif}
+.dl{font-size:13.5px}
+.dl b{color:var(--mut);font-weight:600;display:inline-block;min-width:120px}
+.det .note{font-size:13.5px;grid-column:1/-1;color:var(--ink)}
+.det a{color:var(--teal);font-weight:600}
+.tag{display:inline-block;font:700 10px ui-monospace,Menlo,monospace;padding:2px 7px;border-radius:12px;background:var(--card);border:1px solid var(--line);color:var(--mut)}
+.foot{margin-top:34px;font-size:12px;color:var(--mut)}
+</style>
+
+<div class="wrap">
+  <div class="eyebrow">Lazor family · 19 homes</div>
+  <h1>House comparison</h1>
+  <p class="sub">All homes scored on our framework. <b>Fit</b> = ½ air (Jasmine's lungs) + walkable life + school. Click any row for details. Tap column headers to sort.</p>
+
+  <div class="legend">
+    <b>Fit</b> weights our family priorities: <b>Air</b> 45% (coastal beats inland/valley for Jasmine) · <b>Walkability</b> 35% (walk+bike quality spots) · <b>School</b> 20%. <b>Trajectory</b> compares asking vs the owner's last purchase — <span class="badge underwater">underwater</span> = motivated seller / leverage; <span class="badge gained">gained</span> = seller in profit. Walk/bike counts use our family-activity database (relative, not absolute).
+  </div>
+
+  <div class="controls">
+    <span class="lbl">Filter</span>
+    <button class="f flt on" data-f="all">All 19</button>
+    <button class="f flt" data-f="coastal">🌊 Coastal air (≥9)</button>
+    <button class="f flt" data-f="walk">🚶 Walkable (walk≥15)</button>
+    <button class="f flt" data-f="deal">💰 Underwater (deals)</button>
+    <button class="f flt" data-f="new">🏗️ New build (≥2018)</button>
+  </div>
+
+  <div class="tablewrap">
+    <table id="t"><thead><tr>
+      <th class="l" data-k="fit">#</th>
+      <th class="l" data-k="addr">Home</th>
+      <th data-k="price">Price</th>
+      <th data-k="ppsf">$/sqft</th>
+      <th data-k="beds">Bd/Ba</th>
+      <th data-k="sqft">Sqft</th>
+      <th data-k="air">Air</th>
+      <th data-k="walk">Walk</th>
+      <th data-k="school">School</th>
+      <th data-k="fit">Fit ▾</th>
+      <th data-k="trajpct">Trajectory</th>
+    </tr></thead><tbody id="tb"></tbody></table>
+  </div>
+
+  <div class="foot">
+    Facts from Zillow/Redfin/MLS listings + web search (some prices vary across sources — verify at offer). Air = area ozone/PM classification + live PurpleAir. Reachability = Google Places family-activity DB. Chelsea &amp; Maryland have full dossiers; others link to Zillow. Not financial advice · for the Lazor family decision.
+  </div>
+</div>
+
+<script>
+const HOMES=[{"key":"chelsea","addr":"1140 Chelsea Ave, Santa Monica, CA 90403","area":"Santa Monica","lat":34.0352044,"lng":-118.4799127,"price":3495000,"beds":3,"baths":4,"sqft":2929,"ppsf":1193,"type":"Condo/TH","year":"1981\u219224","lastSold":2071000,"lastSoldDate":"2021-09","trajpct":68.8,"traj":"gained","air":9.6,"airnote":"Coastal SM \u2014 0 ozone days","walk":17,"bike":144,"school":9.0,"fit":9.2,"note":"Designer gut, elevator, rooftop; 0 ozone","zpid":20474179},{"key":"vernon","addr":"701 Vernon Ave, Venice, CA 90291","area":"Venice","lat":33.9984103,"lng":-118.4676146,"price":3960000,"beds":4,"baths":3,"sqft":3024,"ppsf":1310,"type":"Single-fam","year":"new","lastSold":1870000,"lastSoldDate":"2017-12","trajpct":111.8,"traj":"gained","air":9.3,"airnote":"Coastal Venice \u2014 clean, some traffic","walk":25,"bike":149,"school":6.5,"fit":9.0,"note":"New architectural, 7 blocks to ocean","zpid":20451723},{"key":"maryland","addr":"6660 Maryland Dr, Los Angeles, CA 90048","area":"Beverly Grove","lat":34.0676538,"lng":-118.3730344,"price":3580000,"beds":4,"baths":5,"sqft":3620,"ppsf":989,"type":"Single-fam","year":"2023","lastSold":3880000,"lastSoldDate":"2023-09","trajpct":-7.7,"traj":"underwater","air":5.8,"airnote":"Mid-city, ~400m off La Cienega artery","walk":30,"bike":183,"school":8.0,"fit":7.7,"note":"New build, pool; 4 failed listings, underwater","zpid":20776333},{"key":"ogden","addr":"819 N Ogden Dr, Los Angeles, CA 90046","area":"WeHo-adjacent","lat":34.0859567,"lng":-118.359805,"price":4229000,"beds":5,"baths":6,"sqft":5140,"ppsf":823,"type":"Single-fam","year":"2023","lastSold":null,"lastSoldDate":null,"trajpct":null,"traj":null,"air":6.0,"airnote":"Mid-city/Fairfax","walk":24,"bike":172,"school":7.0,"fit":7.6,"note":"New build, pool, rooftop; big","zpid":20785844},{"key":"laurel","addr":"952 N Laurel Ave, Los Angeles, CA 90046","area":"WeHo-adjacent","lat":34.08865249999999,"lng":-118.3645699,"price":3575000,"beds":4,"baths":5,"sqft":4031,"ppsf":887,"type":"Single-fam","year":"2019","lastSold":null,"lastSoldDate":"2022-02","trajpct":null,"traj":null,"air":6.0,"airnote":"Mid-city/Fairfax","walk":22,"bike":162,"school":7.0,"fit":7.6,"note":"Price cut from $4.295M; 96 DOM","zpid":20788043},{"key":"harper","addr":"515 N Harper Ave, Los Angeles, CA 90048","area":"Mid City West","lat":34.0805698,"lng":-118.3692927,"price":5950000,"beds":3,"baths":5,"sqft":3264,"ppsf":1823,"type":"Single-fam","year":"1932","lastSold":1350000,"lastSoldDate":"2017-08","trajpct":340.7,"traj":"gained","air":5.9,"airnote":"Mid-city, near arteries","walk":29,"bike":172,"school":7.0,"fit":7.6,"note":"Priciest $/sqft; near Melrose/WeHo","zpid":20786650},{"key":"phantom","addr":"32346 Phantom Dr, Rancho Palos Verdes, CA 90275","area":"Rancho PV","lat":33.7346285,"lng":-118.3438375,"price":4995000,"beds":5,"baths":4,"sqft":4301,"ppsf":1162,"type":"Single-fam","year":"\u2014","lastSold":null,"lastSoldDate":null,"trajpct":null,"traj":null,"air":9.4,"airnote":"Coastal RPV peninsula \u2014 clean, breezy","walk":6,"bike":9,"school":8.0,"fit":6.6,"note":"Coastal peninsula, ocean-air","zpid":21354672},{"key":"wrightwood","addr":"3655 Wrightwood Dr, Studio City, CA 91604","area":"Studio City hills","lat":34.1371008,"lng":-118.3719869,"price":3299000,"beds":4,"baths":3,"sqft":3100,"ppsf":1064,"type":"Single-fam","year":"reno","lastSold":null,"lastSoldDate":null,"trajpct":null,"traj":null,"air":5.2,"airnote":"Studio City valley \u2014 higher ozone, hotter","walk":14,"bike":104,"school":6.5,"fit":6.1,"note":"Case Study (Thornton Abell) reimagined","zpid":20030488},{"key":"hillhurst","addr":"2225 Hillhurst Ave, Los Angeles, CA 90027","area":"Los Feliz","lat":34.1126488,"lng":-118.2881257,"price":null,"beds":2,"baths":2,"sqft":1764,"ppsf":null,"type":"Single-fam","year":"1937","lastSold":1615050,"lastSoldDate":"2025-07","trajpct":null,"traj":null,"air":6.2,"airnote":"Los Feliz \u2014 basin/hill edge, on busy Hillhurst","walk":8,"bike":108,"school":7.0,"fit":6.0,"note":"SMALL older home \u2014 verify current price","zpid":20809129},{"key":"franklincyn","addr":"3084 Franklin Canyon Dr, Beverly Hills, CA 90210","area":"BH canyon","lat":34.1286564,"lng":-118.4072502,"price":4495000,"beds":5,"baths":5,"sqft":4073,"ppsf":1104,"type":"Single-fam","year":"reno","lastSold":3895000,"lastSoldDate":"2023-10","trajpct":15.4,"traj":"gained","air":7.0,"airnote":"BH canyon \u2014 moderate ozone, low traffic","walk":3,"bike":77,"school":8.5,"fit":5.8,"note":"Renovated canyon modern, pool, views","zpid":20533678},{"key":"simpson","addr":"4527 Simpson Ave, Valley Village, CA 91607","area":"Valley Village","lat":34.1530321,"lng":-118.3891949,"price":3495000,"beds":4,"baths":5,"sqft":3729,"ppsf":937,"type":"Single-fam","year":"2018","lastSold":2360000,"lastSoldDate":"2019-02","trajpct":48.1,"traj":"gained","air":4.8,"airnote":"Valley Village \u2014 higher ozone","walk":10,"bike":138,"school":6.5,"fit":5.7,"note":"New-ish, big","zpid":20024271},{"key":"coldwater2288","addr":"2288 Coldwater Canyon Dr, Beverly Hills, CA 90210","area":"BH (Coldwater)","lat":34.1141344,"lng":-118.4037053,"price":3998000,"beds":4,"baths":4.5,"sqft":2919,"ppsf":1370,"type":"Single-fam","year":"reno","lastSold":2250000,"lastSoldDate":null,"trajpct":77.7,"traj":"gained","air":6.8,"airnote":"BH canyon \u2014 moderate","walk":1,"bike":14,"school":8.5,"fit":5.0,"note":"Nina Takesh designer remodel","zpid":20534004},{"key":"coldwater1960","addr":"1960 Coldwater Canyon Dr, Beverly Hills, CA 90210","area":"BH (Coldwater)","lat":34.1068169,"lng":-118.4052506,"price":4250000,"beds":3,"baths":5,"sqft":3420,"ppsf":1243,"type":"Single-fam","year":"1948","lastSold":3400000,"lastSoldDate":"2021-03","trajpct":25.0,"traj":"gained","air":6.8,"airnote":"BH canyon \u2014 moderate","walk":1,"bike":17,"school":8.5,"fit":5.0,"note":"Renovated traditional, pool","zpid":20533850},{"key":"bluebell","addr":"5109 Bluebell Ave, Valley Village, CA 91607","area":"Valley Village","lat":34.1633551,"lng":-118.4108337,"price":4100000,"beds":4,"baths":3,"sqft":2941,"ppsf":1394,"type":"Single-fam","year":"1936","lastSold":4100000,"lastSoldDate":"2025-04","trajpct":0.0,"traj":"flat","air":4.8,"airnote":"Valley Village \u2014 higher ozone","walk":4,"bike":121,"school":6.5,"fit":4.9,"note":"Recently traded ~$4.1M \u2014 verify listing","zpid":20020722},{"key":"hargrave","addr":"2635 Hargrave Dr, Los Angeles, CA 90068","area":"Hollywood Hills","lat":34.1167051,"lng":-118.3248789,"price":3395000,"beds":4,"baths":4,"sqft":3179,"ppsf":1068,"type":"Single-fam","year":"2022","lastSold":null,"lastSoldDate":null,"trajpct":null,"traj":null,"air":6.6,"airnote":"Hollywood Hills \u2014 moderate ozone","walk":1,"bike":78,"school":5.5,"fit":4.8,"note":"Minarc modern; price cut from $3.75M","zpid":135746658},{"key":"stradella","addr":"1615 Stradella Rd, Los Angeles, CA 90077","area":"Bel Air","lat":34.1003131,"lng":-118.4600187,"price":4445000,"beds":5,"baths":4,"sqft":4665,"ppsf":953,"type":"Single-fam","year":"1966","lastSold":null,"lastSoldDate":null,"trajpct":null,"traj":null,"air":7.0,"airnote":"Bel Air hills \u2014 moderate","walk":0,"bike":6,"school":7.5,"fit":4.7,"note":"Impeccable, travertine pool/spa","zpid":20530431},{"key":"potosi","addr":"3643 Potosi Ave, Studio City, CA 91604","area":"Studio City hills","lat":34.1363418,"lng":-118.4133322,"price":2450000,"beds":4,"baths":4.5,"sqft":3966,"ppsf":618,"type":"Single-fam","year":"\u2014","lastSold":null,"lastSoldDate":null,"trajpct":null,"traj":null,"air":5.2,"airnote":"Studio City valley","walk":1,"bike":97,"school":6.5,"fit":4.5,"note":"Lowest $/sqft \u2014 value; hills","zpid":20032945},{"key":"canterbury","addr":"2850 Canterbury Rd, San Marino, CA 91108","area":"San Marino","lat":34.1311871,"lng":-118.0947234,"price":3350000,"beds":5,"baths":4,"sqft":3584,"ppsf":935,"type":"Single-fam","year":"1950","lastSold":3328000,"lastSoldDate":"2025-02","trajpct":0.7,"traj":"flat","air":4.4,"airnote":"San Marino/SGV \u2014 high ozone (~20+ days like Pasadena)","walk":0,"bike":53,"school":10.0,"fit":4.4,"note":"Top San Marino schools; high ozone SGV","zpid":20703144},{"key":"coronet","addr":"4326 Coronet Dr, Encino, CA 91316","area":"Encino","lat":34.1493061,"lng":-118.5187901,"price":3750000,"beds":5,"baths":5.5,"sqft":4755,"ppsf":789,"type":"Single-fam","year":"2019","lastSold":null,"lastSoldDate":null,"trajpct":null,"traj":null,"air":4.6,"airnote":"Encino valley \u2014 higher ozone, hot","walk":1,"bike":41,"school":6.5,"fit":3.8,"note":"Rebuilt 2019, Valley panoramas, big","zpid":19950721}];
+let sortK='fit', sortDir=-1, filter='all';
+const DOSSIER={20474179:'chelsea', 20776333:'maryland'};
+function col10(v){return v>=8?'var(--good)':v>=6?'var(--warn)':'var(--bad)';}
+function money(p){return p?('$'+(p/1e6).toFixed(2)+'M'):'<span style="color:var(--mut)">TBD</span>';}
+function fmt(n){return n?n.toLocaleString():'—';}
+function pass(h){
+  if(filter==='coastal')return h.air>=9;
+  if(filter==='walk')return h.walk>=15;
+  if(filter==='deal')return h.traj==='underwater';
+  if(filter==='new'){const y=parseInt(h.year);return h.year==='2023'||h.year==='new'||(y>=2018);}
+  return true;
+}
+function render(){
+  let rows=HOMES.filter(pass);
+  rows.sort((a,b)=>{
+    let va=a[sortK], vb=b[sortK];
+    if(sortK==='addr'){va=a.addr;vb=b.addr;return va<vb?-sortDir:va>vb?sortDir:0;}
+    va=(va==null?-1e12:va); vb=(vb==null?-1e12:vb);
+    return (vb-va)*(sortDir<0?1:-1);
+  });
+  const tb=document.getElementById('tb'); tb.innerHTML='';
+  rows.forEach((h,i)=>{
+    const tr=document.createElement('tr'); tr.className='main'; tr.dataset.z=h.zpid;
+    const trajB = h.traj?`<span class="badge ${h.traj}">${h.traj==='underwater'?'▼ '+h.trajpct+'%':h.traj==='gained'?'▲ +'+h.trajpct+'%':'flat'}</span>`:'<span style="color:var(--mut)">—</span>';
+    tr.innerHTML=`<td class="l rank">${i+1}</td>`+
+      `<td class="l"><div class="addr">${h.addr.split(',')[0]}</div><div class="area">${h.area}</div></td>`+
+      `<td>${money(h.price)}</td>`+
+      `<td>${h.ppsf?'$'+fmt(h.ppsf):'—'}</td>`+
+      `<td>${h.beds}/${h.baths}</td>`+
+      `<td>${fmt(h.sqft)}</td>`+
+      `<td><span class="chip" style="background:${col10(h.air)}">${h.air}</span></td>`+
+      `<td>${h.walk}<span style="color:var(--mut);font-size:11px">/${h.bike}</span></td>`+
+      `<td><span class="chip" style="background:${col10(h.school)}">${h.school}</span></td>`+
+      `<td><span class="chip" style="background:${col10(h.fit)}">${h.fit}</span></td>`+
+      `<td>${trajB}</td>`;
+    tb.appendChild(tr);
+    const dtr=document.createElement('tr'); dtr.className='det'; dtr.style.display='none';
+    const dz=DOSSIER[h.zpid];
+    const zurl=`https://www.zillow.com/homedetails/${h.zpid}_zpid/`;
+    dtr.innerHTML=`<td colspan="11"><div class="detin">
+      <h3>${h.addr}</h3>
+      <div class="dl"><b>Price</b> ${money(h.price)} ${h.ppsf?'· $'+fmt(h.ppsf)+'/sqft':''}</div>
+      <div class="dl"><b>Config</b> ${h.beds} bd / ${h.baths} ba · ${fmt(h.sqft)} sqft · ${h.type} · ${h.year}</div>
+      <div class="dl"><b>Air (Jasmine)</b> <span class="chip" style="background:${col10(h.air)}">${h.air}</span> ${h.airnote}</div>
+      <div class="dl"><b>Reachability</b> ${h.walk} walk · ${h.bike} bike (≤15 min, quality spots)</div>
+      <div class="dl"><b>School tier</b> <span class="chip" style="background:${col10(h.school)}">${h.school}</span> / 10</div>
+      <div class="dl"><b>Trajectory</b> ${h.lastSold?('last sold $'+(h.lastSold/1e6).toFixed(2)+'M '+(h.lastSoldDate||'')+' → '+(h.trajpct>0?'+':'')+h.trajpct+'%'):'—'}</div>
+      <div class="note"><b style="color:var(--mut)">Note:</b> ${h.note}</div>
+      <div class="note">${dz?`<a href="/${dz}" onclick="return false" style="color:var(--coral)">★ Full dossier available (${dz})</a> · `:''}<a href="${zurl}" target="_blank">View on Zillow →</a></div>
+    </div></td>`;
+    tb.appendChild(dtr);
+    tr.onclick=()=>{const open=dtr.style.display!=='none';dtr.style.display=open?'none':'';tr.classList.toggle('open',!open);};
+  });
+}
+document.querySelectorAll('thead th').forEach(th=>th.onclick=()=>{
+  const k=th.dataset.k; if(sortK===k)sortDir*=-1; else{sortK=k;sortDir=(k==='addr'?1:-1);}
+  document.querySelectorAll('thead th').forEach(x=>x.innerHTML=x.innerHTML.replace(/ ▾| ▴/,''));
+  th.innerHTML+= sortDir<0?' ▾':' ▴'; render();
+});
+document.querySelectorAll('.flt').forEach(b=>b.onclick=()=>{
+  filter=b.dataset.f; document.querySelectorAll('.flt').forEach(x=>x.classList.toggle('on',x===b)); render();
+});
+render();
+</script>
