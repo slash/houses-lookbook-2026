@@ -1,0 +1,21 @@
+hub-ua.html
+  s_b5f056cd5ab099::t_aa5ce0c02ecf5c 1-58
+hub.html
+  s_b5f056cd5ab099::t_96d73a6a94ada1 31-32
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.20",
+  "base_commit_sha": "a4c99975373faf32d3f8bbc55ebb4ccfaf671e5e",
+  "prompts": {},
+  "sessions": {
+    "s_b5f056cd5ab099": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ba27ce78-dfee-4af0-a5d1-f9c25d26fc95",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Yaroslav Lazor <yaroslav.lazor@railsware.com>"
+    }
+  }
+}
