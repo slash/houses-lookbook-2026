@@ -1,0 +1,39 @@
+hub.html
+  s_b5f056cd5ab099::t_3beace077df988 1-50
+chelsea-reach.html
+  s_b5f056cd5ab099::t_00c3bc538d43a7 1-215
+chelsea.html
+  s_b5f056cd5ab099::t_465f5a8ea0a63a 1-237
+comparison.html
+  s_b5f056cd5ab099::t_0b71d5960a8a01 1-161
+la-temp.html
+  s_b5f056cd5ab099::t_a215eee9c2398c 1-70
+lookbook.html
+  s_b5f056cd5ab099::t_801ee8b41fce0c 1-153
+maryland.html
+  s_b5f056cd5ab099::t_f5383aee654fd7 1-241
+neighborhood.html
+  s_b5f056cd5ab099::t_819fa6ba2f17f3 1-143
+sm-condos.html
+  s_b5f056cd5ab099::t_d50da3f40a9fe3 1-130
+sunswept-ua.html
+  s_b5f056cd5ab099::t_b46d64268b81c0 1-172
+sunswept.html
+  s_b5f056cd5ab099::t_8b79f0d084e292 1-181
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.20",
+  "base_commit_sha": "cc80e5f338a89f43e1856933c746426e56607bdd",
+  "prompts": {},
+  "sessions": {
+    "s_b5f056cd5ab099": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ba27ce78-dfee-4af0-a5d1-f9c25d26fc95",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Yaroslav Lazor <yaroslav.lazor@railsware.com>"
+    }
+  }
+}
