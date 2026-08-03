@@ -1,0 +1,25 @@
+hub-ua.html
+  s_b5f056cd5ab099::t_34b911e9be544e 46-47
+stanley-hills-ua.html
+  s_b5f056cd5ab099::t_410c19e77460c5 5
+  s_b5f056cd5ab099::t_2342da6f319eda 1-3,6-148
+  s_b5f056cd5ab099::t_17fe45a07097fd 4
+hub.html
+  s_b5f056cd5ab099::t_8a9aa93e57c85d 42-43
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.20",
+  "base_commit_sha": "4826c0e5581bf67610b68ebe70944492bbff14a9",
+  "prompts": {},
+  "sessions": {
+    "s_b5f056cd5ab099": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ba27ce78-dfee-4af0-a5d1-f9c25d26fc95",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Yaroslav Lazor <yaroslav.lazor@railsware.com>"
+    }
+  }
+}
